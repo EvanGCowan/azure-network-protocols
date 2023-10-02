@@ -265,7 +265,7 @@ It works like it should! The domain users should not be able to access the conte
 <img width="1603" alt="Screenshot 2023-08-22 at 10 44 05 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/083e924e-2f62-44d6-9258-8fb0cc7c5a27">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+The random domain user opens the "read-access" file. 
 </p>
 <br />
 
@@ -273,7 +273,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 44 22 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/acc53eb5-d149-474a-9488-a046d4383945">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+The user attempts to create a new folder in the "read-access" file that only has "read" permissions to the domain users. 
 </p>
 <br />
 
@@ -281,7 +281,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 44 26 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/b1a15f4f-ffff-4b1e-b8cd-cf620b137cba">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+The result is the user getting a message telling them they "need permission to perform this action" in this shared folder.
 </p>
 <br />
 
@@ -289,7 +289,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 44 55 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/90e96406-e618-46c1-bb6f-533be99d639a">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+As the domain user, I open the "write-access" file.
 </p>
 <br />
 
@@ -297,7 +297,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 45 09 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/9ba7a9e2-82ea-4c21-86b6-53647affe25e">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+I create a new folder in the shared "write-access" folder.
 </p>
 <br />
 
@@ -305,7 +305,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 46 12 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/e481b2e8-cf6b-4a2c-8015-19c35bc1e0c3">
 </p>
 <p>
-client - create a text document in the write-access folder
+I create a new folder in the shared "write-access" folder. 
 </p>
 <br />
 
@@ -313,7 +313,7 @@ client - create a text document in the write-access folder
 <img width="1603" alt="Screenshot 2023-08-22 at 10 46 28 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/75c24d9f-ce5e-4f96-acce-9c9dbc143f55">
 </p>
 <p>
-client - text document has been created
+I create a text document within the new folder I created.
 </p>
 <br />
 
@@ -329,7 +329,7 @@ I can open the document I created and saved in the write-access folder. HELLO!!!
 <img width="1660" alt="Screenshot 2023-08-22 at 10 48 40 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/6f520d99-0973-4689-94cd-7349dd3c248f">
 </p>
 <p>
-I log back into the domain controller to create a file. 
+As a domain admin, I log into the domain controller to create a file to be shared on the network with the users. The purpose is to show that I can create a document to share with the users of the network but make it to where they can only read the document and not modify it.  
 </p>
 <br />
 
@@ -353,7 +353,7 @@ Creation of the text document that will only be readable.
 <img width="1603" alt="Screenshot 2023-08-22 at 10 51 06 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/34f9850a-069e-4780-80eb-87e1605ba787">
 </p>
 <p>
-Logged in to the client and we go to the read-access only folder to check out the document we just created in the domain controller. 
+In this screenshot, I am logged in as the random domain user. The user goes to the read-access only folder to check out the document that was just created by the domain admin in the domain controller. 
 </p>
 <br />
 
@@ -417,7 +417,7 @@ On the domain controller, I create a file to be shared with the pertinent group 
 <img width="1660" alt="Screenshot 2023-08-22 at 10 57 07 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/bc96fe80-bf09-4263-a88b-a617e60ef4ef">
 </p>
 <p>
-On the “accounting” folder you created earlier, set the following permissions:
+On the “accounting” folder I set the following permissions:
 Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
 </p>
 <br />
@@ -426,7 +426,7 @@ Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write�
 <img width="1660" alt="Screenshot 2023-08-22 at 10 57 53 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/bf0bc853-10f5-4182-8b92-1fba066b3a35">
 </p>
 <p>
-On the “accounting” folder you created earlier, set the following permissions:
+On the “accounting” folder I set the following permissions:
 Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
 </p>
 <br />
@@ -443,7 +443,7 @@ From the domain controller, I share this file with the corresponding group where
 <img width="1603" alt="Screenshot 2023-08-22 at 10 58 46 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/899af8f0-abb0-464b-b154-1c9335ec0ce4">
 </p>
 <p>
-On Client-1, as  <someuser>, try to access the accountants folder. It should fail. 
+On client device, I am logged in as the random user and try to access the accountants folder. It should fail. 
 </p>
 <br />
 
