@@ -183,8 +183,11 @@ I also use the command ipconfig /displaydns “search”, observe the results of
 <img width="1603" alt="Screenshot 2023-08-22 at 10 24 53 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/3efa42e8-f6dc-4c8f-b6f1-40dffc1585b7">
 </p>
 <p>
-NETWORK FILE SHARES AND PERMISSIONS
-Connect/log into Client-1 as a normal user (mydomain\<someuser>)
+NETWORK FILE SHARES & PERMISSIONS
+Begining with this screenshot, I will create some sample file shares with various permissions. I will then attempt to access those file shares as a normal user. You will be able to observe examples of how permissions limit access. 
+
+In this screenshot, I log into the client device as a random normal user that I had created using script in Powershell.
+
 </p>
 <br />
 
@@ -192,14 +195,14 @@ Connect/log into Client-1 as a normal user (mydomain\<someuser>)
 <img width="1660" alt="Screenshot 2023-08-22 at 10 30 29 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/d767ee50-4996-4dda-9e7a-aa93f32c8ae7">
 </p>
 <p>
-Connect/log into DC-1 as your domain admin account (mydomain.com\jane_admin). On DC-1, on the C:\ drive, create 4 folders: “read-access”, “write-access”, “no-access”, “accounting”</p>
+In this screenshot, I have logged into the domain controller with my admin account. I will create 4 different folders with different permissions assigned to them. 
+</p>
 <br />
 
 <p>
 <img width="1660" alt="Screenshot 2023-08-22 at 10 35 24 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/c2eb85f8-4934-47d8-b401-68eefc2377c2">
 </p>
 <p>
-Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
 </p>
 <br />
 
@@ -207,15 +210,14 @@ Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
 <img width="1660" alt="Screenshot 2023-08-22 at 10 36 35 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/350edf58-3caf-42d8-b626-bed16685874e">
 </p>
 <p>
-Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
-</p>
+In the above two screenhots the "read-access" folder is created, accessible to the domain users with only "read" permissions.</p>
 <br />
 
 <p>
 <img width="1660" alt="Screenshot 2023-08-22 at 10 37 36 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/8d6cc9be-f742-442e-8611-f5dda01e3854">
 </p>
 <p>
-Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+
 </p>
 <br />
 
@@ -223,7 +225,7 @@ Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Wri
 <img width="1660" alt="Screenshot 2023-08-22 at 10 37 56 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/b84ec437-98db-4892-ae52-7b2f9ed1db44">
 </p>
 <p>
-Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+In the above two screenshots the "write-access" folder is created, accessible to the domain users and it will have "read" & "write" permissions.
 </p>
 <br />
 
