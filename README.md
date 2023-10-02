@@ -233,7 +233,7 @@ In the above two screenshots the "write-access" folder is created, accessible to
 <img width="1660" alt="Screenshot 2023-08-22 at 10 39 45 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/49e160e6-5d8e-46e4-bc84-d953178a8002">
 </p>
 <p>
-Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+In this screenshot I create a "no-access" folder that will only be accessible to the domain admins and not the domain users. This folder will have "read/write" permissions to the domain admins.
 </p>
 <br />
 
@@ -241,7 +241,7 @@ Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Wri
 <img width="1603" alt="Screenshot 2023-08-22 at 10 43 18 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/720aae5a-95ee-4e3e-9e57-45166bb71b27">
 </p>
 <p>
-On Client-1, navigate to the shared folder (start, run, \\dc-1)
+I am no logged into the client device as the random user I used earlier. In this screen, I have navigated to the shared files I created in the domain controller ealrier.
 </p>
 <br />
 
@@ -249,7 +249,7 @@ On Client-1, navigate to the shared folder (start, run, \\dc-1)
 <img width="1559" alt="Screenshot 2023-08-22 at 10 43 41 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/19110f8a-f572-4a24-845f-4eaad62fe593">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+Logged in as the random user on the client device, I try to access the "no-access" folder. We should see the result that I am denied access to the contents of this folder.
 </p>
 <br />
 
@@ -257,7 +257,7 @@ Try to access the folders you just created. Which folders can you access? Which 
 <img width="1603" alt="Screenshot 2023-08-22 at 10 43 44 AM" src="https://github.com/EvanGCowan/azure-network-protocols/assets/142631599/36568335-1c95-4a3a-bd87-62f597c6de99">
 </p>
 <p>
-Try to access the folders you just created. Which folders can you access? Which folders can you create stuff in? Does it make sense?
+It works like it should! The domain users should not be able to access the contents of this folder and are given the denial message. 
 </p>
 <br />
 
